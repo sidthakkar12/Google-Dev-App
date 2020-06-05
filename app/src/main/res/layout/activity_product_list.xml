@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProductListActivity">
+
+    <LinearLayout
+        android:id="@+id/linearSwitchTheme"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dimen_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:layout_height="wrap_content"
+            android:text="@string/str_light_theme"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_dark_theme"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_14" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearSwitchTheme"
+        tools:listitem="@layout/row_product_list" />
+
+    <com.googledev.siddharththakkar.utils.MovableFloatingActionButton
+        android:id="@+id/fabCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+</RelativeLayout>

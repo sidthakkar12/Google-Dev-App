@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Google Dev Siddharth Thakkar Application</string>
+    <string name="str_add_to_cart">Add To Cart</string>
+    <string name="str_redirect">This will redirect you to Product Detail screen.</string>
+    <string name="str_product_added_to_cart">Product added to cart.</string>
+    <string name="str_light_theme">Light Theme</string>
+    <string name="str_dark_theme">Dark Theme</string>
+    <string name="str_back_press_toast">Press BACK again to exit</string>
+</resources>
