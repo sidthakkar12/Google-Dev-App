@@ -54,6 +54,8 @@ class ProductListAdapter(
             itemView.txtProductPrice.text = "$${productModel.price}"
             itemView.txtProductDescription.text = productModel.description
             itemView.txtQuantity.text = "${productModel.quantity}"
+            itemView.txtRating.text = "${productModel.rating}"
+            itemView.ratingProduct.rating = productModel.rating
         }
 
         override fun onClick(view: View?) {

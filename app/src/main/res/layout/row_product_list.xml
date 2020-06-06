@@ -10,8 +10,8 @@
         android:id="@+id/imgProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dimen_5"
         android:layout_marginEnd="@dimen/dimen_5"
+        android:padding="@dimen/dimen_5"
         android:src="@mipmap/ic_launcher" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -29,11 +29,11 @@
         android:id="@+id/txtProductDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="2"
         android:layout_below="@+id/txtProductName"
         android:layout_marginEnd="@dimen/dimen_10"
         android:layout_toStartOf="@+id/linearCartActions"
         android:layout_toEndOf="@+id/imgProduct"
+        android:maxLines="2"
         android:textColor="@color/textColor"
         android:textSize="@dimen/text_12"
         tools:text="This is dummy text." />
@@ -56,37 +56,70 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgMinus"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_5"
-            android:src="@drawable/ic_minus_box_24dp" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="center_vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtQuantity"
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingProduct"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:isIndicator="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_14"
+                tools:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_14"
-            tools:text="0" />
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgAdd"
-            android:layout_width="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_10"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_box_24dp" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:src="@drawable/ic_minus_box_24dp" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgAddToCart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dimen_5"
-            android:src="@drawable/ic_add_shopping_cart_24dp" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_14"
+                tools:text="0" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:src="@drawable/ic_add_box_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/ic_add_shopping_cart_24dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
